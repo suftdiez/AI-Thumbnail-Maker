@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id"> <!-- Default theme akan diatur oleh JS -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,27 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700;900&family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700;900&family=Poppins:wght@900&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Link ke File CSS Eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-500">
 
     <div class="container mx-auto p-4 lg:p-8 min-h-screen flex flex-col">
-        
+
         <header class="flex justify-between items-center mb-10">
             <h1 class="text-2xl font-bold text-gray-800 dark:text-white">AI Thumbnail Maker</h1>
-            
+
             <!-- Theme Switcher -->
             <label for="theme-toggle" class="relative inline-flex items-center cursor-pointer">
                 <input type="checkbox" id="theme-toggle" class="sr-only peer">
-                <div class="w-14 h-8 bg-gray-200 dark:bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all">
+                <div
+                    class="w-14 h-8 bg-gray-200 dark:bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all">
                     <div class="absolute inset-0 flex items-center justify-between px-2">
                         <i id="sun-icon" class="fas fa-sun text-yellow-500 transition-opacity duration-300"></i>
                         <i id="moon-icon" class="fas fa-moon text-blue-300 transition-opacity duration-300"></i>
@@ -35,25 +40,33 @@
         </header>
 
         <main class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start flex-grow">
-            
+
             <!-- Kolom Kontrol (Span 2) -->
-            <div class="lg:col-span-2 bg-white/70 dark:bg-gray-800/50 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700 space-y-6">
+            <div
+                class="lg:col-span-2 bg-white/70 dark:bg-gray-800/50 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700 space-y-6">
                 <div>
-                    <label for="videoTitle" class="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-300">1. Masukkan Judul Video</label>
-                    <input type="text" id="videoTitle" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition" placeholder="Contoh: 1000 SUBSCRIBER PERTAMA">
+                    <label for="videoTitle" class="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-300">1.
+                        Masukkan Judul Video</label>
+                    <input type="text" id="videoTitle"
+                        class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+                        placeholder="Contoh: 1000 SUBSCRIBER PERTAMA">
                 </div>
-                
+
                 <div>
-                    <label for="userImage" class="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-300">2. Unggah Foto Anda</label>
-                    <input type="file" id="userImage" class="custom-file-input text-transparent w-full" accept="image/*">
+                    <label for="userImage" class="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-300">2.
+                        Unggah Foto Anda</label>
+                    <input type="file" id="userImage" class="custom-file-input text-transparent w-full"
+                        accept="image/*">
                 </div>
 
                 <div class="border-t border-gray-200 dark:border-gray-700 pt-6">
-                     <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">Kustomisasi Teks</h3>
-                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">Kustomisasi Teks</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label for="fontStyle" class="text-sm font-medium text-gray-500 dark:text-gray-400">Gaya Font</label>
-                            <select id="fontStyle" class="w-full mt-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <label for="fontStyle" class="text-sm font-medium text-gray-500 dark:text-gray-400">Gaya
+                                Font</label>
+                            <select id="fontStyle"
+                                class="w-full mt-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                 <option value="Impact">Impact</option>
                                 <option value="Poppins">Poppins</option>
                                 <option value="Arial Black">Arial Black</option>
@@ -61,49 +74,60 @@
                             </select>
                         </div>
                         <div>
-                            <label for="fontSize" class="text-sm font-medium text-gray-500 dark:text-gray-400">Ukuran Teks</label>
-                            <input type="range" id="fontSize" min="80" max="200" value="130" class="w-full mt-3 h-2 rounded-lg appearance-none cursor-pointer">
+                            <label for="fontSize" class="text-sm font-medium text-gray-500 dark:text-gray-400">Ukuran
+                                Teks</label>
+                            <input type="range" id="fontSize" min="80" max="200" value="130"
+                                class="w-full mt-3 h-2 rounded-lg appearance-none cursor-pointer">
                         </div>
                         <div class="flex flex-col">
-                            <label for="textColor" class="text-sm font-medium text-gray-500 dark:text-gray-400">Warna Teks</label>
-                            <input type="color" id="textColor" value="#FFFF00" class="w-full mt-1 h-10 bg-transparent border-none rounded-lg cursor-pointer">
+                            <label for="textColor" class="text-sm font-medium text-gray-500 dark:text-gray-400">Warna
+                                Teks</label>
+                            <input type="color" id="textColor" value="#FFFF00"
+                                class="w-full mt-1 h-10 bg-transparent border-none rounded-lg cursor-pointer">
                         </div>
                         <div class="flex flex-col">
-                            <label for="strokeColor" class="text-sm font-medium text-gray-500 dark:text-gray-400">Warna Outline</label>
-                            <input type="color" id="strokeColor" value="#000000" class="w-full mt-1 h-10 bg-transparent border-none rounded-lg cursor-pointer">
+                            <label for="strokeColor" class="text-sm font-medium text-gray-500 dark:text-gray-400">Warna
+                                Outline</label>
+                            <input type="color" id="strokeColor" value="#000000"
+                                class="w-full mt-1 h-10 bg-transparent border-none rounded-lg cursor-pointer">
                         </div>
-                     </div>
+                    </div>
                 </div>
 
-                <button id="generateBtn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl text-lg transition-all transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-800 focus:ring-indigo-500 flex items-center justify-center gap-2">
+                <button id="generateBtn"
+                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl text-lg transition-all transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-800 focus:ring-indigo-500 flex items-center justify-center gap-2">
                     <i class="fas fa-wand-magic-sparkles"></i>
                     <span>Generate Thumbnail</span>
                 </button>
             </div>
 
             <!-- Kolom Output (Span 3) -->
-            <div class="lg:col-span-3 bg-white/70 dark:bg-gray-800/50 backdrop-blur-lg p-4 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col items-center justify-center aspect-[16/9] relative">
-                <div id="loader" class="absolute inset-0 flex-col items-center justify-center bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm z-10 hidden space-y-4">
+            <div
+                class="lg:col-span-3 bg-white/70 dark:bg-gray-800/50 backdrop-blur-lg p-4 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col items-center justify-center aspect-[16/9] relative">
+                <div id="loader"
+                    class="absolute inset-0 flex-col items-center justify-center bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm z-10 hidden space-y-4">
                     <i class="fas fa-spinner fa-spin text-4xl text-indigo-500"></i>
                     <p class="font-semibold text-gray-600 dark:text-gray-300">Membuat thumbnail...</p>
                 </div>
                 <div id="canvas-container" class="w-full h-full rounded-2xl overflow-hidden hidden">
-                    <canvas id="thumbnailCanvas" width="1280" height="720" class="w-full h-full object-contain"></canvas>
+                    <canvas id="thumbnailCanvas" width="1280" height="700"
+                        class="w-full h-full object-contain"></canvas>
                 </div>
                 <div id="placeholder" class="text-center text-gray-400 dark:text-gray-500 flex flex-col items-center">
-                     <i class="fas fa-image text-6xl mb-4"></i>
+                    <i class="fas fa-image text-6xl mb-4"></i>
                     <p class="font-semibold">Hasil thumbnail akan muncul di sini</p>
                 </div>
-                <a id="downloadBtn" href="#" download="ai-thumbnail.png" class="hidden mt-4 w-full max-w-xs bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl text-lg transition-transform transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-800 focus:ring-emerald-500 flex items-center justify-center gap-2">
+                <a id="downloadBtn" href="#" download="ai-thumbnail.png"
+                    class="hidden mt-4 w-full max-w-xs bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl text-lg transition-transform transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-800 focus:ring-emerald-500 flex items-center justify-center gap-2">
                     <i class="fas fa-download"></i>
                     <span>Unduh Thumbnail</span>
                 </a>
             </div>
         </main>
     </div>
-    
+
     <!-- Link ke File JavaScript Eksternal -->
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
